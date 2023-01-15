@@ -134,7 +134,7 @@ public class ServerProtocol implements MessagingProtocol<String> {
         {
             msgData.add("SEND");
             msgData.add("destination");
-            msgData.add(msg.indexOf("destination")+12);
+            msgData.add(msg.indexOf("destination")+14);
             index = msg.indexOf("\n\n") + 4;
             msgData.add(index);
             
@@ -155,7 +155,7 @@ public class ServerProtocol implements MessagingProtocol<String> {
         {
             msgData.add("SUBSCRIBE");
             msgData.add("destination");
-            msgData.add(msg.indexOf("destination")+13);
+            msgData.add(msg.indexOf("destination")+14);
             msgData.add("id");
             msgData.add(msg.indexOf("id")+3);
             msgData.add("receipt");
