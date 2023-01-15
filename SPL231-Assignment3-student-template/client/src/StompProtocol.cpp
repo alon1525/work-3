@@ -162,7 +162,7 @@ string StompProtocol:: Subscribe(std::string &dest){
     
     stringstream message;
     message << "SUBSCRIBE\n";
-    message << "destination:/" << dest << "\n";
+    message << "destination:/topic/" << dest << "\n";
     message << "id:" << topicToSub[dest] << "\n";
     receipt++;
     joinReceiptNum = receipt-1;
